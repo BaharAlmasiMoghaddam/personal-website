@@ -144,3 +144,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+//
+//
+// add to shop:
+function addToCart(productId) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const product = productDetails[productId];
+
+  const existingProduct = cart.find((item) => item.id === productId);
+
+  if (existingProduct) {
+    existingProduct.quantity++;
+  } else {
+    cart.push({
+      id: productId,
+      name: product.name,
+      price: product.price,
+      quantity: 1,
+    });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`${product.name} added to cart`);
+}

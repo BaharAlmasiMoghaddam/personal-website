@@ -836,6 +836,20 @@ th {
   background-color: hsl(123, 43%, 39%);
 }
 
+.remove-btn {
+  background-color: hsl(0, 100%, 71%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: hsl(0, 100%, 62%);
+}
+/* =============================== */
 /* Responsive  ================== */
 @media (max-width: 768px) {
   .hero h1 {
