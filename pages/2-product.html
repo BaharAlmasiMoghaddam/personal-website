@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - Coffee Shop</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ############## -->
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="../1-home.html">Home</a></li>
+
+        <li><a href="../pages/2-products.html">Products</a></li>
+        <li><a href="../pages/5-shop.html">Shop</a></li>
+
+        <li onclick="scrollToSection('about')">
+          <a href="../1-home.html">About us</a>
+        </li>
+
+        <li><a href="./3-signup.html">Signup/Login</a></li>
+      </ul>
+
+      <!-- ############## -->
+      <!-- dark mode button  -->
+      <div class="toggle-switch">
+        <input type="checkbox" id="dark-mode-toggle" />
+        <label for="dark-mode-toggle" class="toggle-label">
+          <span class="toggle-circle">
+            <img
+              src="../assets/img/light-removebg-preview.png"
+              alt="Light Mode Icon"
+              class="icon light-icon"
+            />
+            <img
+              src="../assets/img/dark-removebg-preview.png"
+              alt="Dark Mode Icon"
+              class="icon dark-icon"
+            />
+          </span>
+        </label>
+      </div>
+    </nav>
+
+    <!-- products  -->
+    <div class="container">
+      <h1>Our Products</h1>
+
+      <div class="product-grid">
+        <div class="product-card" onclick="openModal(1)">
+          <img src="../assets/img/Espresso.png" alt="Espresso" />
+          <h3>Espresso</h3>
+          <p>$2.99</p>
+        </div>
+
+        <div class="product-card" onclick="openModal(2)">
+          <img src="../assets/img/Latte.png" alt="Latte" />
+          <h3>Latte</h3>
+          <p>$3.99</p>
+        </div>
+        <div class="product-card" onclick="openModal(3)">
+          <img src="../assets/img/cap-i.png" alt="Cappuccino" />
+          <h3>Cappuccino</h3>
+          <p>$3.49</p>
+        </div>
+        <div class="product-card" onclick="openModal(4)">
+          <img src="../assets/img/moca.png" alt="Mocha" />
+          <h3>Mocha</h3>
+          <p>$4.49</p>
+        </div>
+        <div class="product-card" onclick="openModal(5)">
+          <img src="../assets/img/Americano.png" alt="Americano" />
+          <h3>Americano</h3>
+          <p>$2.49</p>
+        </div>
+
+        <div class="product-card" onclick="openModal(6)">
+          <img src="../assets/img/Macchiato.png" alt="Macchiato" />
+          <h3>Macchiato</h3>
+          <p>$3.89</p>
+        </div>
+
+        <div class="product-card" onclick="openModal(7)">
+          <img src="../assets/img/dark-forest.png" alt="Flat White" />
+          <h3>Dark Forest</h3>
+          <p>$3.79</p>
+        </div>
+
+        <div class="product-card" onclick="openModal(8)">
+          <img src="../assets/img/black-hill.png" alt="Irish Coffee" />
+          <h3>Black Hills</h3>
+          <p>$5.49</p>
+        </div>
+
+        <div class="product-card" onclick="openModal(9)">
+          <img src="../assets/img/classic-i.png" alt="Cold Brew" />
+          <h3>Classic</h3>
+          <p>$3.29</p>
+        </div>
+
+        <div class="product-card" onclick="openModal(10)">
+          <img src="../assets/img/Cold Brew.png" alt="Cold Brew" />
+          <h3>Cold Brew</h3>
+          <p>$3.29</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Product Details -->
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">Close</button>
+        <div id="product-details"></div>
+      </div>
+    </div>
+
+    <!-- ####### -->
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>Contact Us:</p>
+        <ul class="contact-info">
+          <li><i class="bi bi-telephone-fill"></i> Phone: +123 456 7890</li>
+          <li>
+            <i class="bi bi-envelope-fill"></i> Email: info@coffeeshop.com
+          </li>
+          <li>
+            <i class="bi bi-geo-alt-fill"></i> Address: 123 Coffee Street,
+            Coffee Town
+          </li>
+        </ul>
+        <p>&copy; 2025 Coffee Shop. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/2-products.js"></script>
+  </body>
+</html>

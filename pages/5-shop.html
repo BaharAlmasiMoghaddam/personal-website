@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Coffee Shop</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body class="shopping">
+    <!-- Nav Bar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="../1-home.html">Home</a></li>
+        <li><a href="./2-products.html">Products</a></li>
+        <li><a href="./5-shop.html">Shop</a></li>
+        <li onclick="scrollToSection('about')">
+          <a href="../1-home.html">About us</a>
+        </li>
+        <li><a href="./3-signup.html">Signup/Login</a></li>
+      </ul>
+
+      <div class="toggle-switch">
+        <input type="checkbox" id="dark-mode-toggle" />
+        <label for="dark-mode-toggle" class="toggle-label">
+          <span class="toggle-circle">
+            <img
+              src="../assets/img/light-removebg-preview.png"
+              alt="Light Mode Icon"
+              class="icon light-icon"
+            />
+            <img
+              src="../assets/img/dark-removebg-preview.png"
+              alt="Dark Mode Icon"
+              class="icon dark-icon"
+            />
+          </span>
+        </label>
+      </div>
+    </nav>
+
+    <div class="shop-container">
+      <h1 class="shop-h1">Checkout</h1>
+
+      <table class="shop-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <!-- dynamical art items  -->
+        </tbody>
+      </table>
+
+      <div class="total">
+        <strong>Total:</strong> $<span id="cart-total">0.00</span>
+      </div>
+
+      <a href="javascript:void(0)" class="checkout-btn" onclick="checkout()"
+        >Proceed to Checkout</a
+      >
+    </div>
+
+    <!-- ####### -->
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>Contact Us:</p>
+        <ul class="contact-info">
+          <li><i class="bi bi-telephone-fill"></i> Phone: +123 456 7890</li>
+          <li>
+            <i class="bi bi-envelope-fill"></i> Email: info@coffeeshop.com
+          </li>
+          <li>
+            <i class="bi bi-geo-alt-fill"></i> Address: 123 Coffee Street,
+            Coffee Town
+          </li>
+        </ul>
+        <p>&copy; 2025 Coffee Shop. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/5-shop.js"></script>
+  </body>
+</html>
